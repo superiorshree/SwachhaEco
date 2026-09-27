@@ -72,7 +72,7 @@ export default function GlobalNav({
           <div>
             <div className="flex items-center gap-2">
               <span className="font-bold tracking-tight text-[16px] text-white group-hover:text-emerald-400 transition-colors">
-                Swachh<span className="text-emerald-400">Setu</span>
+                Swachha<span className="text-emerald-400">Eco</span>
               </span>
               <span className="text-[11px] font-normal px-2 py-0.2 rounded bg-white/10 text-white/80 hidden sm:inline">
                 Civic Initiative

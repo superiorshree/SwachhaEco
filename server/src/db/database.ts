@@ -2,7 +2,8 @@ import sqlite3 from 'sqlite3';
 import path from 'path';
 import fs from 'fs';
 
-const dbDir = path.join(__dirname, '../../data');
+const isVercel = process.env.VERCEL || process.env.VERCEL_ENV;
+const dbDir = isVercel ? '/tmp/data' : path.join(__dirname, '../../data');
 if (!fs.existsSync(dbDir)) {
   fs.mkdirSync(dbDir, { recursive: true });
 }
