@@ -1,0 +1,44 @@
+{
+  "name": "swachhaeco",
+  "version": "1.0.0",
+  "description": "SwachhaEco • Smart Solid Waste Collection & Recycling Platform with trust & integrity layer and gamification",
+  "main": "server/dist/index.js",
+  "scripts": {
+    "install:all": "npm --prefix server install && npm --prefix client install",
+    "build:client": "npm --prefix client run build",
+    "build:server": "npm --prefix server run build",
+    "build": "npm run build:client && npm run build:server",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "start": "node server/dist/index.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.117.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "exifr": "^7.1.3",
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/multer": "^1.4.11",
+    "@types/node": "^20.14.9",
+    "@types/uuid": "^9.0.8",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.2"
+  },
+  "keywords": [
+    "waste-management",
+    "recycling",
+    "civic-platform",
+    "vercel",
+    "supabase",
+    "gamification",
+    "trust-system"
+  ],
+  "author": "",
+  "license": "MIT"
+}

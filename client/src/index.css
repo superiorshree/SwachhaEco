@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --card: #ffffff;
+  --ring: #239a4e;
+  --input: #e6eae7;
+  --muted: #eff1ee;
+  --accent: #75cf5e;
+  --border: #dee3df;
+  --radius: 0.5rem;
+  --chart-1: #16793f;
+  --chart-2: #239a4e;
+  --chart-3: #75cf5e;
+  --chart-4: #b1e6a2;
+  --chart-5: #4c524e;
+  --popover: oklch(0.99 0 0);
+  --primary: #16793f;
+  --sidebar: oklch(0.99 0 0);
+  --spacing: 0.25rem;
+  --font-mono: Geist Mono, monospace;
+  --font-sans: Inter, sans-serif;
+  --secondary: #333333;
+  --background: #fafafa;
+  --font-serif: Georgia, serif;
+  --foreground: #1c211e;
+  --destructive: oklch(0.63 0.19 23.03);
+  --shadow-blur: 2px;
+  --shadow-color: hsl(0 0% 0%);
+  --sidebar-ring: oklch(0 0 0);
+  --shadow-spread: 0px;
+  --letter-spacing: 0em;
+  --shadow-opacity: 0.18;
+  --sidebar-accent: oklch(0.94 0 0);
+  --sidebar-border: oklch(0.94 0 0);
+  --card-foreground: #1c211e;
+  --shadow-offset-x: 0px;
+  --shadow-offset-y: 1px;
+  --sidebar-primary: oklch(0 0 0);
+  --muted-foreground: #5f6761;
+  --accent-foreground: #102314;
+  --popover-foreground: oklch(0 0 0);
+  --primary-foreground: #ffffff;
+  --sidebar-foreground: oklch(0 0 0);
+  --secondary-foreground: #ffffff;
+  --destructive-foreground: oklch(1.00 0 0);
+  --sidebar-accent-foreground: oklch(0 0 0);
+  --sidebar-primary-foreground: oklch(1.00 0 0);
+}
+
+@layer base {
+  html {
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--foreground);
+    background-color: var(--background);
+  }
+
+  body {
+    font-size: 17px;
+    line-height: 1.47;
+    letter-spacing: -0.374px;
+    color: var(--foreground);
+    background-color: var(--background);
+    font-family: var(--font-sans);
+  }
+
+  /* Micro-interaction: button press scale */
+  button:active, .btn-active:active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease;
+  }
+}
+
+@layer components {
+  /* Apple / Civic Design System Buttons */
+  .btn-primary {
+    @apply bg-primary text-white font-medium rounded-pill px-[22px] py-[11px] text-[16px] inline-flex items-center justify-center transition-all duration-150 hover:bg-[#239a4e] focus:outline-none focus:ring-2 focus:ring-[#239a4e] active:scale-95 shadow-sm;
+  }
+
+  .btn-secondary-pill {
+    @apply bg-canvas text-primary border border-primary font-medium rounded-pill px-[22px] py-[11px] text-[16px] inline-flex items-center justify-center transition-all duration-150 hover:bg-primary/5 active:scale-95;
+  }
+
+  .btn-dark-utility {
+    @apply bg-ink text-white font-normal rounded-sm px-[15px] py-[8px] text-[14px] inline-flex items-center justify-center transition-all duration-150 hover:bg-black active:scale-95;
+  }
+
+  .btn-pearl-capsule {
+    @apply bg-surface-pearl text-ink-muted80 border border-border-hairline font-normal rounded-md px-[14px] py-[8px] text-[14px] inline-flex items-center justify-center transition-all duration-150 hover:border-[#239a4e] active:scale-95;
+  }
+
+  /* Cards */
+  .card-utility {
+    @apply bg-canvas border border-border-hairline rounded-lg p-[24px] shadow-sm;
+  }
+
+  /* Search input */
+  .input-search-pill {
+    @apply bg-canvas text-ink text-[16px] border border-border-hairline rounded-pill px-[20px] py-[12px] h-[44px] focus:outline-none focus:ring-2 focus:ring-[#239a4e] transition-all;
+  }
+}
